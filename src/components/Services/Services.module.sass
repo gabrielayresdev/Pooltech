@@ -1,0 +1,36 @@
+.services 
+    min-height: 100%
+    min-width: 100%
+    
+    background: #2991D6
+
+    display: grid
+    grid-template-rows: 4fr 4fr
+
+    .services_text 
+        text-align: center
+        color: #fff
+
+        .title 
+            font-size: 4rem
+            margin: 2rem 0
+
+    .services_cards 
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        
+        position: relative
+        height: 100%
+
+        background: #fff
+        .firstRow, .secondRow
+            display: flex
+            gap: 1rem
+            transform: translateY(-50%)
+            
+
+        .secondRow 
+            position: absolute
+            transform: translateY(10%)
