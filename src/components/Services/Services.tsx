@@ -7,6 +7,7 @@ import CleanIcon from "../../assets/clean.svg";
 import FilterIcon from "../../assets/filter.svg";
 import GearIcon from "../../assets/gear.svg";
 import ChemicalIcon from "../../assets/chemical.svg";
+import TimeIcon from "../../assets/time.svg";
 
 const Services = () => {
   return (
@@ -18,7 +19,7 @@ const Services = () => {
         </p>
       </div>
       <div className={styles.services_cards}>
-        <div className={styles.firstRow}>
+        <div className={styles.services_container}>
           <Service
             icon={TilesIcon}
             title="Troca de azulejo"
@@ -34,8 +35,6 @@ const Services = () => {
             title="Limpeza de filtro"
             paragraph="Melhore a qualidade da água da sua piscina com nossa limpeza de filtro especializada. Água mais limpa, diversão sem preocupações!"
           />
-        </div>
-        <div className={styles.secondRow}>
           <Service
             icon={GearIcon}
             title="Conserto de equipamentos"
@@ -45,6 +44,11 @@ const Services = () => {
             icon={ChemicalIcon}
             title="Tratamento químico da água"
             paragraph="Nosso tratamento químico da água é a chave para águas cristalinas e saudáveis na sua piscina. Equilibramos pH, cloro e produtos químicos com expertise, garantindo a segurança e qualidade da água."
+          />
+          <Service
+            icon={TimeIcon}
+            title="Inspeções regulares"
+            paragraph="Com nossas inspeções regulares, sua piscina estará sempre em ótimo estado, proporcionando diversão com tranquilidade."
           />
         </div>
       </div>
