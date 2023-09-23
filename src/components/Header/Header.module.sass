@@ -1,0 +1,58 @@
+.header 
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 0 10%
+
+    background: #fff
+    border-bottom: 1px solid #ddd
+    height: 6.25rem
+
+    .logo 
+        height: 100%
+        display: flex
+        align-items: center
+        gap: 1rem
+
+        font-size: 3rem
+        font-weight: 800
+        font-family: 'Rokkitt', serif
+        img 
+            max-height: 90%
+
+    nav 
+        display: flex
+        gap: 2.1875rem
+        height: 100%
+        a 
+            font-size: 1.25rem
+            color: #000
+            text-decoration: none 
+            height: 100%
+
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            position: relative
+            
+            
+
+            
+            &::after 
+                content: ''
+                width: 0
+                height: 4px
+                background: #2991D6
+                display: block
+                position: absolute 
+                bottom: -1px
+                transition: all .3s
+                
+
+            &:hover::after 
+                width: 100%
+
+
+            
+            
