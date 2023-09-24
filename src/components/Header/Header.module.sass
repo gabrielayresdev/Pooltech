@@ -23,6 +23,9 @@
         img 
             max-height: 90%
 
+    .open 
+        display: none
+
     nav 
         display: flex
         gap: 2.1875rem
@@ -57,6 +60,48 @@
             &:hover::after 
                 width: 100%
 
+    @media (max-width: 768px)
+        position: relative
+        padding: 0
 
+        .logo 
+            font-size: 2rem
+            gap: .4rem
+
+            img 
+                max-height: 3rem
+        .open 
+            display: block
+        
+        nav 
+            background: #fff
+            z-index: 2
+            height: auto
+            width: 100%
+            border-top: 1px solid #ddd
+            padding: 1rem
+
+            display: none
+            position: absolute
+            top: 100%
+
+            animation: .3s openMenu ease-in-out forwards
+
+            &.active 
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+
+        
+
+        @keyframes openMenu 
+            from
+                left: 100%
+                opacity: 0
+            to 
+                left: 0
+                opacity: 1
+            
+        
             
             
