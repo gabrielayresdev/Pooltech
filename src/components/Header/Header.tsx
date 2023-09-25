@@ -1,12 +1,31 @@
 import styles from "./Header.module.sass";
 import Logo from "../../assets/logo_sph_piscinas.png";
-import React from "react";
+import React, { EventHandler } from "react";
 import Burger from "../../assets/icons8-cardápio.svg";
 
 const Header = () => {
   const [visible, setVisible] = React.useState<boolean>();
+  const headerRef = React.useRef<HTMLHeadElement>(null);
+
+  React.useEffect(() => {
+    function handleMenu(event: Event) {
+      if (event.target && !headerRef.current?.contains(event.target as Node)) {
+        setVisible(false);
+      }
+    }
+
+    const events = ["click", "scroll"];
+    events.forEach((e) => {
+      document.addEventListener(e, handleMenu);
+    });
+
+    return () => {
+      document.removeEventListener("click", handleMenu);
+    };
+  }, [visible]);
+
   return (
-    <header className={styles.header}>
+    <header className={styles.header} ref={headerRef}>
       <div className={styles.logo}>
         <img src={Logo} /> SPH Piscinas
       </div>
@@ -17,12 +36,12 @@ const Header = () => {
         <img src={Burger} alt="" />
       </div>
       <nav className={visible ? styles.active : ""}>
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#depoimentos" className={styles.active}>
-          Depoimentos
-        </a>
-        <a href="#contato">Contato</a>
+        {["sobre", "serviços", "depoimentos", "contato"].map((item) => {
+          // ! Criar função para remover caracteres especiais
+          return (
+            <a href={`#${item.replace(/[ç]/g, "c").toLowerCase()}`}>{item}</a>
+          );
+        })}
       </nav>
     </header>
   );
