@@ -7,7 +7,7 @@ import Wave from "../UI/Wave";
 
 const About = () => {
   return (
-    <div className={styles.about}>
+    <div className={styles.about} id="sobre">
       <Wave color="#fff" className={styles.detail} />
       <div className={styles.container}>
         <div className={styles.images}>
