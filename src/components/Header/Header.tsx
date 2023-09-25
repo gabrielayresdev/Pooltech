@@ -1,6 +1,7 @@
 import styles from "./Header.module.sass";
 import Logo from "../../assets/logo_sph_piscinas.png";
 import React from "react";
+import Burger from "../../assets/icons8-cardápio.svg";
 
 const Header = () => {
   const [visible, setVisible] = React.useState<boolean>();
@@ -9,8 +10,11 @@ const Header = () => {
       <div className={styles.logo}>
         <img src={Logo} /> SPH Piscinas
       </div>
-      <div className={styles.openMenu} onClick={() => setVisible(!visible)}>
-        x
+      <div
+        className={styles.menu_controller}
+        onClick={() => setVisible(!visible)}
+      >
+        <img src={Burger} alt="" />
       </div>
       <nav className={visible ? styles.active : ""}>
         <a href="#sobre">Sobre</a>
