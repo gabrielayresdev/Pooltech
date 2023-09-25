@@ -1,13 +1,8 @@
 import styles from "./MainSection.module.sass";
-import BannerImg from "../../assets/banner.png";
-import Wave from "../UI/Wave";
 
 const MainSection = () => {
   return (
     <main className={styles.main}>
-      <div className={styles.banner}>
-        <img src={BannerImg} />
-      </div>
       <h1 className={styles.title}>Limpeza e manutenção de piscinas </h1>
       <p className={styles.paragraph}>
         Sua Experiência Aquática de Excelência. Somos uma empresa dedicada à
@@ -21,8 +16,6 @@ const MainSection = () => {
         de piscina inesquecíveis
       </p>
       <a className={styles.button}>Vamos trabalhar jutos</a>
-
-      <Wave className={styles.detail} />
     </main>
   );
 };
