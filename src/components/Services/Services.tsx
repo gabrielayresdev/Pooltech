@@ -7,10 +7,12 @@ import FilterIcon from "../../assets/filter.svg";
 import GearIcon from "../../assets/gear.svg";
 import ChemicalIcon from "../../assets/chemical.svg";
 import TimeIcon from "../../assets/time.svg";
+import Wave from "../UI/Wave";
 
 const Services = () => {
   return (
     <div className={styles.services}>
+      <Wave className={styles.detail} />
       <div className={styles.services_text}>
         <h2 className={styles.title}>Nossos serviços</h2>
         <p className={styles.paragraph}>
