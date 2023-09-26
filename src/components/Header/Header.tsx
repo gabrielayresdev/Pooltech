@@ -39,7 +39,9 @@ const Header = () => {
         {["sobre", "serviços", "depoimentos", "contato"].map((item) => {
           // ! Criar função para remover caracteres especiais
           return (
-            <a href={`#${item.replace(/[ç]/g, "c").toLowerCase()}`}>{item}</a>
+            <a key={item} href={`#${item.replace(/[ç]/g, "c").toLowerCase()}`}>
+              {item}
+            </a>
           );
         })}
       </nav>
