@@ -13,8 +13,46 @@ interface Rules {
 const rules: Rules = {
   email: {
     validation: (value, setError) => {
-      setError("Existe um erro");
-      return false;
+      const regex =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+      if (value.length === 0) {
+        setError("Preencha o campo");
+        return false;
+      } else if (!regex.test(value)) {
+        setError("E-mail inválido");
+        return false;
+      } else {
+        setError(null);
+        return true;
+      }
+    },
+  },
+  number: {
+    validation: (value, setError) => {
+      const regex =
+        /^(?:\+?55\s?)?(?:(?:\(\d{2}\)|\d{2})(?:\s?|-)?)(?:\d{5}(?:-|\s?)\d{4}|\d{10})$/g;
+      if (value.length === 0) {
+        setError("Preencha o campo");
+        return false;
+      } else if (!regex.test(value)) {
+        setError("Número inválido");
+        return false;
+      } else {
+        setError(null);
+        return true;
+      }
+    },
+  },
+  notNull: {
+    validation: (value, setError) => {
+      if (value.length === 0) {
+        console.log(value.length);
+        setError("Preencha o campo");
+        return false;
+      }
+      setError(null);
+      return true;
     },
   },
 };

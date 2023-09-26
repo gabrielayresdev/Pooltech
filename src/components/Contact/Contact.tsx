@@ -5,13 +5,18 @@ import Textarea from "./Form_fields/Textarea";
 import useForm from "../../hooks/useForm";
 
 const Contact = () => {
-  const { value: name, onChange: changeName } = useForm("email");
+  const {
+    value: name,
+    error: nameError,
+    onChange: changeName,
+    validate: validateName,
+  } = useForm("notNull");
   const {
     value: number,
     error: numberError,
     onChange: changeNumber,
     validate: validateNumber,
-  } = useForm("email");
+  } = useForm("number");
   const {
     value: email,
     error: emailError,
@@ -34,27 +39,26 @@ const Contact = () => {
           id="name"
           handleChange={changeName}
           data-testid="name"
+          onBlur={() => validateName()}
+          error={nameError}
         />
         <Input
           label="Whatsapp"
           value={number}
           handleChange={changeNumber}
           data-testid={"number"}
-          onBlur={() => {
-            validateNumber();
-          }}
+          onBlur={() => validateNumber()}
           id="number"
           error={numberError}
           columns="1"
+          type="tel"
         />
         <Input
           label="email"
           value={email}
           handleChange={changeEmail}
           data-testid={"email"}
-          onBlur={() => {
-            validateEmail();
-          }}
+          onBlur={() => validateEmail()}
           id="email"
           error={emailError}
           columns="1"
