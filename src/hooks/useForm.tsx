@@ -1,6 +1,6 @@
 import React from "react";
 
-type formType = "email" | "number" | "notNull" | undefined;
+type formType = "email" | "number" | "notNull" | null;
 interface Rules {
   [key: string]: {
     validation: (
