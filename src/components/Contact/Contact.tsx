@@ -79,7 +79,7 @@ const Contact = () => {
     }
   }, [nameError, numberError, emailError]);
   return (
-    <div className={styles.contact}>
+    <div className={styles.contact} id="contato">
       <h2 className={styles.title}>Contato</h2>
       <p className={styles.paragraph}>Entre em contato conosco</p>
       <form onSubmit={handleSubmit} className={styles.form} ref={formRef}>

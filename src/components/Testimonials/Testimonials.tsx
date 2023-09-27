@@ -5,7 +5,7 @@ import Testimonial from "./Testimonial";
 
 const Testimonials = () => {
   return (
-    <div className={styles.testimonials}>
+    <div className={styles.testimonials} id="depoimentos">
       <div className={styles.testimonials_text}>
         <h2 className={styles.title}>Depoimentos</h2>
         <p className={styles.paragraph}>

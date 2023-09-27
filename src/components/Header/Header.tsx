@@ -1,7 +1,8 @@
 import styles from "./Header.module.sass";
 import Logo from "../../assets/logo_sph_piscinas.png";
-import React, { EventHandler } from "react";
+import React from "react";
 import Burger from "../../assets/icons8-cardápio.svg";
+import { Link } from "react-scroll";
 
 const Header = () => {
   const [visible, setVisible] = React.useState<boolean>();
@@ -39,9 +40,14 @@ const Header = () => {
         {["sobre", "serviços", "depoimentos", "contato"].map((item) => {
           // ! Criar função para remover caracteres especiais
           return (
-            <a key={item} href={`#${item.replace(/[ç]/g, "c").toLowerCase()}`}>
+            <Link
+              key={item}
+              to={`${item.replace(/[ç]/g, "c").toLowerCase()}`}
+              smooth
+              duration={500}
+            >
               {item}
-            </a>
+            </Link>
           );
         })}
       </nav>

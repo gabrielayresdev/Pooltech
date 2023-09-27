@@ -1,4 +1,5 @@
 import styles from "./MainSection.module.sass";
+import { Link } from "react-scroll";
 
 const MainSection = () => {
   return (
@@ -15,7 +16,9 @@ const MainSection = () => {
         Piscinas para fazer parte de sua jornada aquática e tornar seus momentos
         de piscina inesquecíveis
       </p>
-      <a className={styles.button}>Vamos trabalhar jutos</a>
+      <Link to="contato" smooth duration={500} className={styles.button}>
+        Vamos trabalhar jutos
+      </Link>
     </main>
   );
 };
