@@ -29,8 +29,8 @@
             column-gap: 3rem
             row-gap: 2rem
 
-            position: absolute
-            top: -25%
+            position: relative
+            transform: translateY(-25%)
 
     .detail 
         position: absolute
@@ -39,12 +39,19 @@
     
     @media (max-width: 768px)
         max-width: 100vw
+
+        display: flex
+        flex-direction: column
         .services_text 
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin: 5rem 1rem 170px
             .title 
                 margin: 0 0 1rem
-            .paragraph 
-                margin-bottom: 170px
+            
         .services_cards 
             .services_container 
                 grid-template-columns: 1fr
+                transform: translateY(-6%)
         
