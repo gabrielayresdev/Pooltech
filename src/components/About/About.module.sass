@@ -46,3 +46,51 @@
     .detail 
         position: absolute 
         bottom: 100%
+
+    @media (max-width: 768px)
+        height: auto
+
+        .container 
+            width: 95%
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 2rem
+
+            .images 
+                min-height: auto
+                height: 6.25rem
+
+                display: flex
+                justify-content: center
+
+                .pictureContainer 
+                    height: 100%
+                    width: 70%
+                    overflow: hidden
+
+                    display: flex
+                    align-items: center
+
+                    img 
+                        width: 100%
+
+                    &.first 
+                        left: 2rem
+            .text
+                .title 
+                    font-size: 3rem
+                .paragraph 
+                    font-size: 1rem
+                    position: relative  
+
+                    &:first-of-type::before 
+                        content: ''
+                        height: 1.5rem
+                        width: .125rem
+                        background: #2991D6
+                        display: block
+                        position: absolute
+                        top: 0
+                        left: -4px
+            
