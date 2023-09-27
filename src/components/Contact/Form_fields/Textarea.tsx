@@ -1,34 +1,33 @@
 import React from "react";
 import styles from "./Input.module.sass";
 
-interface IInput extends React.InputHTMLAttributes<HTMLInputElement> {
+interface ITextarea extends React.InputHTMLAttributes<HTMLTextAreaElement> {
   label: string;
-  type?: string;
   className?: string;
   value: string;
   error?: string | null;
   handleChange: (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
   ) => void;
 }
 
 const Textarea = ({
   label,
-  type,
   className,
   value,
   handleChange,
   id,
   error,
   ...rest
-}: IInput) => {
+}: ITextarea) => {
   return (
     <div className={styles.input_container}>
       <label htmlFor={id} className={styles.label}>
         {label}
       </label>
       <textarea
-        type={type ? type : "text"}
         className={`${styles.input} ${className}`}
         value={value}
         id={id}
