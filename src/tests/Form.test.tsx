@@ -2,6 +2,9 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import Contact from "../components/Contact/Contact";
 
 describe("Form behavior", () => {
+  test("Testando teste", () => {
+    expect(1 + 1).toBe;
+  });
   test("Email is not correct", () => {
     render(<Contact />);
 
