@@ -30,11 +30,22 @@
             row-gap: 2rem
 
             position: relative
-            transform: translateY(-25%)
+            transform: translateY(-9.6875rem)
 
     .detail 
         position: absolute
         bottom: 100%
+
+    @media (max-width: 1280px)
+        grid-template-rows: auto auto
+
+        .services_text 
+            .paragraph 
+                margin-bottom: 12rem
+        .services_cards
+            .services_container 
+                grid-template-columns: 1fr 1fr
+
 
     
     @media (max-width: 768px)

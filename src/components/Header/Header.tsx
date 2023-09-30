@@ -1,5 +1,5 @@
 import styles from "./Header.module.sass";
-import Logo from "../../assets/logo_sph_piscinas.png";
+import Logo from "../../assets/logo.svg";
 import React from "react";
 import Burger from "../../assets/icons8-cardápio.svg";
 import { Link } from "react-scroll";
@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <header className={styles.header} ref={headerRef}>
       <div className={styles.logo}>
-        <img src={Logo} /> SPH Piscinas
+        <img src={Logo} />
       </div>
       <div
         className={styles.menu_controller}

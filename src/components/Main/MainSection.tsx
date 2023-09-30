@@ -12,9 +12,9 @@ const MainSection = () => {
         abrangentes, desde o projeto e instalação de piscinas personalizadas até
         a manutenção regular e tratamento químico especializado. Nossa equipe de
         especialistas altamente qualificados está empenhada em transformar seu
-        espaço de lazer em um oásis relaxante e convidativo. Confie na SPH
-        Piscinas para fazer parte de sua jornada aquática e tornar seus momentos
-        de piscina inesquecíveis
+        espaço de lazer em um oásis relaxante e convidativo. Confie na Pooltech
+        para fazer parte de sua jornada aquática e tornar seus momentos de
+        piscina inesquecíveis
       </p>
       <Link to="contato" smooth duration={500} className={styles.button}>
         Vamos trabalhar jutos
