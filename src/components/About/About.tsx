@@ -23,8 +23,8 @@ const About = () => {
           <p className={styles.paragraph}>
             A Pooltech é uma renomada empresa de manutenção de piscinas que tem
             se destacado no mercado por muitos anos. Com um firme compromisso
-            com a excelência e a satisfação do cliente, a SPH Piscinas se tornou
-            uma referência na indústria de manutenção de piscinas.
+            com a excelência e a satisfação do cliente, a Pooltech se tornou uma
+            referência na indústria de manutenção de piscinas.
           </p>
           <p className={styles.paragraph}>
             A empresa tem uma longa história de sucesso e crescimento contínuo.

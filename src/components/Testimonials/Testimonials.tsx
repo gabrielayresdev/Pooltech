@@ -1,7 +1,9 @@
-import React from "react";
 import styles from "./Testimonials.module.sass";
 import Wave from "../UI/Wave";
 import Testimonial from "./Testimonial";
+import Profile1 from "../../assets/profile1.png";
+import Profile2 from "../../assets/profile2.png";
+import Profile3 from "../../assets/profile3.jpg";
 
 const Testimonials = () => {
   return (
@@ -15,16 +17,19 @@ const Testimonials = () => {
       <div className={styles.testimonials_cards}>
         <div className={styles.cards_row}>
           <Testimonial
+            image={Profile1}
             name="Suelen Sgorla"
-            text={`Após pesquisar muito, encontrei a empresa do Sr. Jorge. Fiquei muito empolgada com os comentários e logo entrei em contato com ele. Dois dias depois ele foi em minha residência, pontual, foi super solícito, educadíssimo, tirou todas minhas dúvidas, avaliou minha piscina e fez meu orçamento rapidamente. Gostei do cuidado que teve em me explicar tudo que seria necessário fazer, dando as opções de custo e tudo mais. Empresa séria e indico para todos, sem dúvidas. Obrigada.`}
+            text={`A PoolTech é a empresa ideal para a manutenção de piscinas! O serviço deles é excepcional, e minha piscina nunca esteve tão bonita. A equipe é confiável, bem informada e sempre se esforça ao máximo para garantir que tudo esteja em perfeitas condições. Eu valorizo sua consistência e profissionalismo, tornando o cuidado com a piscina sem complicações. Se você deseja uma piscina limpa e sem preocupações, eu recomendo muito a PoolTech. Eles superaram minhas expectativas, e estou extremamente satisfeito com o serviço deles!`}
           />
           <Testimonial
-            name="Suelen Sgorla"
-            text={`Após pesquisar muito, encontrei a empresa do Sr. Jorge. Fiquei muito empolgada com os comentários e logo entrei em contato com ele. Dois dias depois ele foi em minha residência, pontual, foi super solícito, educadíssimo, tirou todas minhas dúvidas, avaliou minha piscina e fez meu orçamento rapidamente. Gostei do cuidado que teve em me explicar tudo que seria necessário fazer, dando as opções de custo e tudo mais. Empresa séria e indico para todos, sem dúvidas. Obrigada.`}
+            image={Profile2}
+            name="Andressa Lisboa"
+            text={`Agradeço à Pooltech pela eficiente limpeza do filtro da minha piscina. O serviço foi rápido e eficaz, deixando meu sistema de filtragem em perfeitas condições. Agora, a água da minha piscina está mais clara e saudável do que nunca. Fiquei impressionado com a competência da equipe da Pooltech, que realizou o trabalho de forma rápida e profissional. Recomendo seus serviços de limpeza de filtro a todos os proprietários de piscinas que desejam manter a qualidade da água`}
           />
           <Testimonial
-            name="Suelen Sgorla"
-            text={`Após pesquisar muito, encontrei a empresa do Sr. Jorge. Fiquei muito empolgada com os comentários e logo entrei em contato com ele. Dois dias depois ele foi em minha residência, pontual, foi super solícito, educadíssimo, tirou todas minhas dúvidas, avaliou minha piscina e fez meu orçamento rapidamente. Gostei do cuidado que teve em me explicar tudo que seria necessário fazer, dando as opções de custo e tudo mais. Empresa séria e indico para todos, sem dúvidas. Obrigada.`}
+            image={Profile3}
+            name="Gustavo Marques"
+            text={`Contratei a Pooltech para a troca de azulejos da minha piscina e fiquei extremamente satisfeito. A equipe demonstrou grande expertise, garantindo uma substituição impecável dos azulejos e o eficiente conserto dos equipamentos. Minha piscina agora parece nova, e todos os sistemas funcionam perfeitamente. O serviço foi concluído dentro do prazo prometido. Recomendo a Pooltech para qualquer projeto de manutenção de piscina. São confiáveis, profissionais e entregam resultados excepcionais.`}
           />
         </div>
       </div>
