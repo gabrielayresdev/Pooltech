@@ -40,9 +40,15 @@ const Input = ({
         onChange={handleChange}
         {...rest}
       ></input>
-      <span data-testid={`${id}_error_message`} className={styles.error}>
-        {error}
-      </span>
+      {error && (
+        <span
+          className={styles.error}
+          role="alert"
+          data-testid={`${id}-error-message`}
+        >
+          {error}
+        </span>
+      )}
     </div>
   );
 };

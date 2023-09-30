@@ -3,7 +3,7 @@ import styles from "./Contact.module.sass";
 import Input from "./Form_fields/Input";
 import Textarea from "./Form_fields/Textarea";
 import useForm from "../../hooks/useForm";
-import emailjs from "@emailjs/browser";
+import { sendEmail } from "../../services/sendEmail";
 
 const Contact = () => {
   const {
@@ -39,35 +39,30 @@ const Contact = () => {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
 
-    if (
-      validateName() &&
-      validateNumber() &&
-      validateEmail() &&
-      formRef.current
-    ) {
+    validateName();
+    validateNumber();
+    validateEmail();
+
+    function enableButton() {
+      if (buttonRef.current !== null && buttonRef.current !== undefined)
+        buttonRef.current.disabled = false;
+    }
+    function clearFields() {
+      setName("");
+      setNumber("");
+      setEmail("");
+      setMessage("");
+    }
+    if (!nameError && !numberError && !emailError && formRef.current) {
       if (buttonRef.current !== null && buttonRef.current !== undefined)
         buttonRef.current.disabled = true;
-      emailjs
-        .sendForm(
-          "service_3rs4zko",
-          "template_r7hh5sj",
-          formRef.current,
-          "OQgsMMeFDCVxaSIwJ"
-        )
-        .then(
-          (result) => {
-            if (buttonRef.current !== null && buttonRef.current !== undefined)
-              buttonRef.current.disabled = false;
-
-            setName("");
-            setNumber("");
-            setEmail("");
-            setMessage("");
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
+      const successful = sendEmail(formRef);
+      if (successful) {
+        enableButton();
+        clearFields();
+      } else {
+        enableButton();
+      }
     }
   }
 
