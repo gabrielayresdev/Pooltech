@@ -1,27 +1,42 @@
-# React + TypeScript + Vite
+# PoolTech
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Sobre
 
-Currently, two official plugins are available:
+O Pooltech é uma landing page desenvolvida para uma empresa de manutenção e limpeza de piscinas fictícia. O projeto foi desenvolvido com React, TypeScript, Sass e o objetivo do case de estudo foi começar os estudos de testes no Frontend através do Jest e React Testing Library. A landing page possui 4 seções: sobre, serviços, depoimentos e contato.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Caso queira utilizar o site, acesse https://pooltech.vercel.app
 
-## Expanding the ESLint configuration
+![Site responsivo. Design adaptável para todas as plataformas](/src/assets/readme_images/template.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tecnologias
 
-- Configure the top-level `parserOptions` property like this:
+Essas foram as tecnologias usadas no projeto:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+- React
+- TypeScript
+- Sass
+- Jest
+- React Testing Library
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Layout
+
+### Desktop
+
+![Layout desktop](/src/assets/readme_images/desktop.png)
+![Layout desktop](/src/assets/readme_images/desktop2.png)
+
+### Tablet
+
+![Layout tablet](/src/assets/readme_images/tablet.png)
+![Layout tablet](/src/assets/readme_images/tablet2.png)
+
+### Mobile
+
+![Layout mobile](/src/assets/readme_images/mobile.png)
+![Layout mobile](/src/assets/readme_images/mobile2.png)
+
+## Links
+
+- Repositório: https://github.com/gabrielayresdev/Pooltech
+  - Caso encontre algum bug e deseje reportar, favor, enviar email para gabriel.ar.fort@gmail.com.
+- Deploy: https://pooltech.vercel.app
