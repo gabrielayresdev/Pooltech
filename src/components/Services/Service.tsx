@@ -9,7 +9,7 @@ interface IService {
 
 const Service = ({ icon, title, paragraph }: IService) => {
   return (
-    <div className={styles.service} id="servicos">
+    <div className={styles.service}>
       <img src={icon} alt="" />
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.paragraph}>{paragraph}</p>

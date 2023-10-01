@@ -11,7 +11,7 @@ import Wave from "../UI/Wave";
 
 const Services = () => {
   return (
-    <div className={styles.services}>
+    <div className={styles.services} id="servicos">
       <Wave className={styles.detail} />
       <div className={styles.services_text}>
         <h2 className={styles.title}>Nossos serviços</h2>

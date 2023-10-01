@@ -45,6 +45,7 @@ const Header = () => {
               to={`${item.replace(/[ç]/g, "c").toLowerCase()}`}
               smooth
               duration={500}
+              offset={-100}
             >
               {item}
             </Link>
