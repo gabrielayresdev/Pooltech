@@ -3,7 +3,7 @@ import styles from "./About.module.sass";
 
 import Pic1 from "../../assets/Foto 1.png";
 import Pic2 from "../../assets/Foto 2.png";
-import Wave from "../UI/Wave";
+import Wave from "../Wave/Wave";
 
 const About = () => {
   return (

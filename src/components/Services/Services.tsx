@@ -1,5 +1,5 @@
 import styles from "./Services.module.sass";
-import Service from "./Service";
+import Service from "../Service/Service";
 
 import TilesIcon from "../../assets/tiles.svg";
 import CleanIcon from "../../assets/clean.svg";
@@ -7,12 +7,12 @@ import FilterIcon from "../../assets/filter.svg";
 import GearIcon from "../../assets/gear.svg";
 import ChemicalIcon from "../../assets/chemical.svg";
 import TimeIcon from "../../assets/time.svg";
-import Wave from "../UI/Wave";
+import Wave from "../Wave/Wave";
 
 const Services = () => {
   return (
     <div className={styles.services} id="servicos">
-      <Wave className={styles.detail} />
+      <Wave className={styles.detail} color="#2991D6" />
       <div className={styles.services_text}>
         <h2 className={styles.title}>Nossos serviços</h2>
         <p className={styles.paragraph}>

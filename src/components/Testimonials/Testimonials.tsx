@@ -1,5 +1,5 @@
 import styles from "./Testimonials.module.sass";
-import Wave from "../UI/Wave";
+import Wave from "../Wave/Wave";
 import Testimonial from "./Testimonial";
 import Profile1 from "../../assets/profile1.png";
 import Profile2 from "../../assets/profile2.png";

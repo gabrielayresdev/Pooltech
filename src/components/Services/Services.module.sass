@@ -1,16 +1,12 @@
 .services 
-    min-height: 100vh
     min-width: 100%
-    
+    margin-bottom: 6rem 
     background: #2991D6
-
-    display: grid
-    grid-template-rows: 2fr 3fr
     position: relative
-
     .services_text 
         text-align: center
         color: #fff
+        padding: 2rem 0 4rem
 
         .title 
             font-size: 4rem
@@ -22,6 +18,8 @@
         
         display: flex
         justify-content: center
+        background: rgb(41,145,214)
+        background: linear-gradient(180deg, rgba(41,145,214,1) 25%, rgba(255,255,255,1) 0%)
         .services_container 
             display: grid
             grid-template-columns: repeat(3, auto)
@@ -29,8 +27,7 @@
             column-gap: 3rem
             row-gap: 2rem
 
-            position: relative
-            transform: translateY(-9.6875rem)
+
 
     .detail 
         position: absolute
@@ -38,10 +35,6 @@
 
     @media (max-width: 1280px)
         grid-template-rows: auto auto
-
-        .services_text 
-            .paragraph 
-                margin-bottom: 12rem
         .services_cards
             .services_container 
                 grid-template-columns: 1fr 1fr
