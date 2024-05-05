@@ -5,10 +5,11 @@ import Header from "../../components/Header/Header";
 import About from "../../components/About/About";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import Contact from "../../components/Contact/Contact";
+import styles from "./Home.module.sass";
 
 const Home = () => {
   return (
-    <div>
+    <div className={styles.container}>
       <Header />
       <MainSection />
       <About />
