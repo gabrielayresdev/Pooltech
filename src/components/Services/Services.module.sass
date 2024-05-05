@@ -1,12 +1,12 @@
 .services 
     min-width: 100%
     margin-bottom: 6rem 
-    background: #2991D6
     position: relative
     .services_text 
         text-align: center
         color: #fff
         padding: 2rem 0 4rem
+        background: #2991D6
 
         .title 
             font-size: 4rem
@@ -36,6 +36,7 @@
     @media (max-width: 1280px)
         grid-template-rows: auto auto
         .services_cards
+            background: linear-gradient(180deg, rgba(41,145,214,1) 16.5%, rgba(255,255,255,1) 0%)
             .services_container 
                 grid-template-columns: 1fr 1fr
 
@@ -50,13 +51,14 @@
             display: flex
             flex-direction: column
             align-items: center
-            margin: 5rem 1rem 170px
+            padding: 0 1rem 4rem
             .title 
                 margin: 0 0 1rem
                 font-size: 3rem
             
         .services_cards 
+            background: linear-gradient(180deg, rgba(41,145,214,1) 8.3%, rgba(255,255,255,1) 0%)
+
             .services_container 
                 grid-template-columns: 1fr
-                transform: translateY(-6%)
         
